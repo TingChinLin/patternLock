@@ -214,9 +214,9 @@ class PatternLock {
     const iObj = privateMap.get(this);
 
     const {
-      option, matrix, margin, radius,
+      option
     } = iObj;
-
+    const {matrix=iObj.matrix, margin=iObj.margin, radius=iObj.radius} = option
     // allow to set password manually only when enable set pattern option is true
     if (!option.enableSetPattern) return;
 

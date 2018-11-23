@@ -326,11 +326,13 @@
       value: function setPattern(pattern) {
         var iObj = privateMap.get(this);
 
-        var option = iObj.option,
-            matrix = iObj.matrix,
-            margin = iObj.margin,
-            radius = iObj.radius;
-
+        var option = iObj.option;
+        var _option$matrix = option.matrix,
+            matrix = _option$matrix === undefined ? iObj.matrix : _option$matrix,
+            _option$margin = option.margin,
+            margin = _option$margin === undefined ? iObj.margin : _option$margin,
+            _option$radius = option.radius,
+            radius = _option$radius === undefined ? iObj.radius : _option$radius;
         // allow to set password manually only when enable set pattern option is true
 
         if (!option.enableSetPattern) return;
